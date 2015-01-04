@@ -65,7 +65,7 @@ static const uint8_t u8g_dev_st7567_pi13264_init_seq[] PROGMEM = {
   
   0x0a6,            /* display normal, bit val 0: LCD pixel off. */
   
-  0x081,		    /* set contrast */
+  0x0C0,		    /* set contrast */
   0x018,		    /* contrast value*/
   
   /*0x0ac,*/        /* indicator */
