@@ -375,7 +375,29 @@ class U8GLIB_LM6063_2X : public U8GLIB
       { }
 };
 
-class U8GLIB_64128N : public U8GLIB 
+class U8GLIB_PI13264 : public U8GLIB
+{
+  public:
+    U8GLIB_PI13264(uint8_t sck, uint8_t mosi, uint8_t cs, uint8_t a0, uint8_t reset = U8G_PIN_NONE)
+      : U8GLIB(&u8g_dev_st7567_pi13264_sw_spi, sck, mosi, cs, a0, reset)
+      { }
+    U8GLIB_PI13264(uint8_t cs, uint8_t a0, uint8_t reset = U8G_PIN_NONE)
+      : U8GLIB(&u8g_dev_st7567_pi13264_hw_spi, cs, a0, reset)
+      { }
+};
+
+class U8GLIB_PI13264_2X : public U8GLIB
+{
+  public:
+    U8GLIB_PI13264_2X(uint8_t sck, uint8_t mosi, uint8_t cs, uint8_t a0, uint8_t reset = U8G_PIN_NONE)
+      : U8GLIB(&u8g_dev_st7567_pi13264_2x_sw_spi, sck, mosi, cs, a0, reset)
+      { }
+    U8GLIB_PI13264_2X(uint8_t cs, uint8_t a0, uint8_t reset = U8G_PIN_NONE)
+      : U8GLIB(&u8g_dev_st7567_pi13264_2x_hw_spi, cs, a0, reset)
+      { }
+};
+
+class U8GLIB_64128N : public U8GLIB
 {
   public:
     U8GLIB_64128N(uint8_t sck, uint8_t mosi, uint8_t cs, uint8_t a0, uint8_t reset = U8G_PIN_NONE) 
